@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // This script attempts to modify the content of a div
+    // but uses the incorrect method, causing it to silently fail
+    // in some browsers
+    document.getElementById('myDiv').text = 'This text should replace the original text.';
+  </script>
+</body>
+</html>
